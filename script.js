@@ -10,10 +10,10 @@ const musicaFoco = document.querySelector('#alternar-musica');
 const iniciarOuPausarBtn = document.querySelector('#start-pause span');
 const iconeStartPause = document.querySelector('.app__card-primary-butto-icon')
 const tempoTela = document.querySelector('#timer');
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
-const play = new Audio('/sons/play.wav');
-const pause = new Audio('/sons/pause.mp3');
-const beep = new Audio('/sons/beep.mp3');
+const musica = new Audio('./sons/luna-rise-part-one.mp3');
+const play = new Audio('./sons/play.wav');
+const pause = new Audio('./sons/pause.mp3');
+const beep = new Audio('./sons/beep.mp3');
 musica.loop = true;
 
 
@@ -97,14 +97,14 @@ function iniciarOuPausar() {
     play.play();
     intervalId = setInterval(contagemRegressiva, 1000);
     iniciarOuPausarBtn.textContent = 'Pausar';
-    iconeStartPause.setAttribute('src', '/imagens/pause.png');
+    iconeStartPause.setAttribute('src', './imagens/pause.png');
 }
 
 function zerar() {
     clearInterval(intervalId);
     iniciarOuPausarBtn.textContent = 'Começar';
     intervalId = null;
-    iconeStartPause.setAttribute('src', '/imagens/play_arrow.png');
+    iconeStartPause.setAttribute('src', './imagens/play_arrow.png');
 }
 
 function mostrarTempo () {
